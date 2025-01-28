@@ -52,6 +52,10 @@ jobs:
         with:
           path: './dist'
 
+      - name: Prepare dist
+        run: |
+          echo "fatihmutlu.com" > ./dist/CNAME
+
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
