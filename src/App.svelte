@@ -36,7 +36,7 @@ const projects = [
     description: "Developed LSTM-based models to forecast timing and magnitude of upcoming earthquakes.",
     techStack: ["LSTM", "TensorFlow", "PyTorch", "Python"],
     image: earthquakeImage, 
-    link: `https://www.fatihmutlu.com/assets/earthquake-D62lX_Kv.png`
+    link: `#`
   },
   {
     title: "22 Years of Music",
