@@ -48,6 +48,11 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Prepare dist
+        run: |
+          echo "fatihmutlu.com" > ./dist/CNAME
+          echo "www.fatihmutlu.com" > ./dist/CNAME
+
       - name: Copy CNAME
         run: cp CNAME ./dist/
           
@@ -56,9 +61,7 @@ jobs:
         with:
           path: './dist'
 
-      - name: Prepare dist
-        run: |
-          echo "fatihmutlu.com" > ./dist/CNAME
+
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
