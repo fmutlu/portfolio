@@ -15,7 +15,7 @@ const projects = [
     description: "This personal website showcasing my projects and skills.",
     techStack: ["Svelte", "Vite", "TypeScript"],
     image: portfolioImage,
-    link: "#"
+    link: "https://www.fatihmutlu.com/assets/aircraftraj-XQcIs77I.gif"
   },
   {
     title: "Master's Project: Aircraft Trajectory Prediction using Deep Learning",
@@ -36,7 +36,7 @@ const projects = [
     description: "Developed LSTM-based models to forecast timing and magnitude of upcoming earthquakes.",
     techStack: ["LSTM", "TensorFlow", "PyTorch", "Python"],
     image: earthquakeImage, 
-    link: `${currentUrl}/src/assets/Semester_Project_Earthquake_Prediction.pdf`
+    link: `https://www.fatihmutlu.com/assets/earthquake-D62lX_Kv.png`
   },
   {
     title: "22 Years of Music",
