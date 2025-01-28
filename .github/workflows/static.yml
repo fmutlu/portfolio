@@ -1,33 +1,64 @@
-# Install Node.js
-  - name: Setup Node.js
-    uses: actions/setup-node@v3
-    with:
-      node-version: 18 # Use the version of Node.js that matches your project requirements
+# .github/workflows/deploy.yml
 
-  # Install dependencies and build the project
-  - name: Install dependencies
-    run: npm install
-  - name: Build project
-    run: npm run build
+name: Deploy to GitHub Pages
 
-  # Setup Pages and upload the built artifact
-  - name: Setup Pages
-    uses: actions/configure-pages@v5
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
-  - name: Prepare dist
-    run: |
-      echo "customdomain.com" > ./dist/CNAME
-      echo "www.customdomain.com" > ./dist/CNAME
-  - name: Copy CNAME
-    run: cp CNAME ./dist/
-      
-  - name: Upload artifact
-    uses: actions/upload-pages-artifact@v3
-    with:
-      path: './dist'
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
+concurrency:
+  group: "github-pages"
+  cancel-in-progress: false
 
-  # Deploy to GitHub Pages
-  - name: Deploy to GitHub Pages
-    id: deployment
-    uses: actions/deploy-pages@v4
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout Repository
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Setup Node.js Environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # 3. Install Dependencies
+      - name: Install Dependencies
+        run: npm ci
+
+      # 4. Build the Project
+      - name: Build Project
+        run: npm run build
+
+      # 5. Add CNAME File
+      - name: Add CNAME to dist
+        run: echo "fatihmutlu.com" > ./dist/CNAME
+
+      # 6. Configure GitHub Pages
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      # 7. Upload Artifact to GitHub Pages
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+      # 8. Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
