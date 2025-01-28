@@ -47,6 +47,10 @@ jobs:
       # Setup Pages and upload the built artifact
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      - name: Copy CNAME
+        run: cp CNAME ./dist/
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
