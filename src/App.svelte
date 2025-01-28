@@ -15,14 +15,14 @@ const projects = [
     description: "This personal website showcasing my projects and skills.",
     techStack: ["Svelte", "Vite", "TypeScript"],
     image: portfolioImage,
-    link: "https://www.fatihmutlu.com/assets/aircraftraj-XQcIs77I.gif"
+    link: "#"
   },
   {
     title: "Master's Project: Aircraft Trajectory Prediction using Deep Learning",
     description: "Implementation of a state-of-the-art Transformer based model for predicting aircraft trajectories.",
     techStack: ["Pytorch", "Python", "PySpark", "AWS", "GCP", "Numpy", "Pandas"],
     image: aircraftGif,
-    link: `${currentUrl}/src/assets/aircraftraj.gif`
+    link: "https://www.fatihmutlu.com/assets/aircraftraj-XQcIs77I.gif"
   },
   {
     title: "Stock Markets & Google Trends",
