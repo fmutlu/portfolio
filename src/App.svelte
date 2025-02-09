@@ -1,7 +1,7 @@
 <script lang="ts">
   import ProjectCard from './lib/ProjectCard.svelte';
   import profileImage from './assets/profile.jpg';
-  import aircraftGif from './assets/aircraftraj.gif';
+  import aircraftGif from './assets/aircraftraj_s.gif';
   import portfolioImage from './assets/svelte.png';
   import StockMarketImage from './assets/stockmarket.png';
   import earthquakeImage from './assets/earthquake.png';
