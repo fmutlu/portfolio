@@ -1,6 +1,6 @@
 <script lang="ts">
   import ProjectCard from './lib/ProjectCard.svelte';
-  import profileImage from './assets/profile.jpg';
+  import profileImage from './assets/profile.webp';
   import aircraftGif from './assets/aircraftraj.gif';
   import portfolioImage from './assets/svelte.png';
   import StockMarketImage from './assets/stockmarket.png';
