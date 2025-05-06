@@ -64,7 +64,7 @@ const projects = [
             <p class="title"><strong>AI & Data Consultant</strong></p>
             <p>5+ years of experience in coding</p>
             <p style="position: relative;">Expertise in PyTorch &nbsp
-              <img src="https://pytorch.org/assets/images/pytorch-logo.png" alt="Pytorch" class="tech-logo pytorch-logo" /> 
+              <img src="/pytorch_logo.svg" alt="Pytorch" class="tech-logo pytorch-logo" /> 
                &nbsp and Spark
               <img src="https://spark.apache.org/images/spark-logo-rev.svg" alt="Spark" class="tech-logo spark-logo" />
             </p>
@@ -172,7 +172,7 @@ const projects = [
   }
 
   .pytorch-logo {
-    transform: translate(-1em, 0.17em) scale(1.15);
+    transform: translate(-0.98em, 0.18em) scale(0.93);
   }
 
   .spark-logo {
