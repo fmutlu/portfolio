@@ -63,9 +63,9 @@ const projects = [
           <div class="details">
             <p class="title"><strong>AI & Data Consultant</strong></p>
             <p>5+ years of experience in coding</p>
-            <p style="position: relative;">Expertise in PyTorch &nbsp
+            <p style="position: relative;">Expertise in &nbsp
               <img src="/pytorch_logo.svg" alt="Pytorch" class="tech-logo pytorch-logo" /> 
-               &nbsp and Spark
+              &nbsp PyTorch  and Spark
               <img src="https://spark.apache.org/images/spark-logo-rev.svg" alt="Spark" class="tech-logo spark-logo" />
             </p>
             <p><strong>MSc in Computer Science, EPFL</strong></p>
