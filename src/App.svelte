@@ -61,7 +61,7 @@ const projects = [
             <h1>Mutlu</h1>
           </div>
           <div class="details">
-            <p class="title"><strong>AI & Data Consultant</strong></p>
+            <p class="title"><strong>AI/Data Engineer</strong></p>
             <p>5+ years of experience in coding</p>
             <p style="position: relative;">Expertise in &nbsp
               <img src="/pytorch_logo.svg" alt="Pytorch" class="tech-logo pytorch-logo" /> 
