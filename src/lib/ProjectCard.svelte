@@ -7,7 +7,11 @@
 </script>
 
 <a href={link} class="project-card" target="_blank" rel="noopener noreferrer">
-  <img src={image} alt={title} class="project-image" />
+  {#if image.endsWith('.mp4')}
+    <video src={image} aria-label={title} class="project-image" autoplay loop muted playsinline></video>
+  {:else}
+    <img src={image} alt={title} class="project-image" />
+  {/if}
   <div class="project-content">
     <h3>{title}</h3>
     <p>{description}</p>

@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import ProjectCard from './lib/ProjectCard.svelte';
   import { profileChunks } from './assets/profileData';
-  import aircraftGif from './assets/aircraftraj.gif';
+  import aircraftVideo from './assets/aircraftraj.mp4';
   import portfolioImage from './assets/svelte.png';
   import StockMarketImage from './assets/stockmarket.png';
   import earthquakeImage from './assets/earthquake.png';
@@ -38,7 +38,7 @@ const projects = [
     title: "Master's Project: Aircraft Trajectory Prediction using Deep Learning",
     description: "Implementation of a state-of-the-art Transformer based model for predicting aircraft trajectories.",
     techStack: ["Pytorch", "Python", "PySpark", "AWS", "GCP", "Numpy", "Pandas"],
-    image: aircraftGif,
+    image: aircraftVideo,
     link: "https://www.fatihmutlu.com/assets/aircraftraj-XQcIs77I.gif"
   },
   {
