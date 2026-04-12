@@ -1,6 +1,7 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import ProjectCard from './lib/ProjectCard.svelte';
-  import profileImage from './assets/profile.webp';
+  import { profileChunks } from './assets/profileData';
   import aircraftGif from './assets/aircraftraj.gif';
   import portfolioImage from './assets/svelte.png';
   import StockMarketImage from './assets/stockmarket.png';
@@ -9,6 +10,22 @@
   let currentUrl = window.location.pathname;
 
   
+  let canvas: HTMLCanvasElement;
+
+  onMount(() => {
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      const img = new Image();
+      img.onload = () => {
+        ctx?.drawImage(img, 0, 0, canvas.width, canvas.height);
+      };
+      // De-obfuscate: join chunks, reverse string, append prefix
+      const reversed = profileChunks.join('');
+      const rawBase64 = reversed.split('').reverse().join('');
+      img.src = 'data:image/webp;base64,' + rawBase64;
+    }
+  });
+
 const projects = [
   {
     title: "Portfolio",
@@ -52,8 +69,18 @@ const projects = [
   <section class="hero">
     <div class="profile-section">
       <div class="profile-container">
-        <div class="left-side">
-          <img src={profileImage} alt="Profile" class="profile-image" />
+        <div class="left-side" style="position: relative; user-select: none;">
+          <canvas 
+            bind:this={canvas} 
+            width="250" 
+            height="250" 
+            class="profile-image" 
+            aria-label="Profile"
+            on:contextmenu|preventDefault
+            style="pointer-events: none;"
+          ></canvas>
+          <!-- Transparent overlay to intercept any stray clicks -->
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10;"></div>
         </div>
         <div class="right-side">
           <div class="name">

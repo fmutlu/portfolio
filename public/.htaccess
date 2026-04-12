@@ -1,5 +1,5 @@
 <IfModule mod_headers.c>
-    <FilesMatch "^profile-[a-zA-Z0-9]+\.webp$">
+    <FilesMatch "\.js$">
         Header set X-Robots-Tag "noindex"
     </FilesMatch>
 </IfModule>

@@ -1,2 +1,2 @@
 User-agent: *
-Disallow: /assets/profile-*.webp
+Disallow: /assets/*.js
